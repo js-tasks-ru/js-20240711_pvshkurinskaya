@@ -5,7 +5,6 @@
  */
 export function createGetter(path) {
     const props = path.split(".");
-    
     function inner(obj) {
       let ans = obj;
       for (let i = 0; i < props.length; i++) {
@@ -16,6 +15,5 @@ export function createGetter(path) {
       }
       return ans;
     }
-    
     return inner;
   }
